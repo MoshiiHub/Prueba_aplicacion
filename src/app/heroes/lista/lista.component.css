@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  height: 350px; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  background-color: #1e222f;
+}
+
+.borrarMensaje {
+  font-size: 0.85em;
+  color: rgb(241, 241, 241);
+  z-index: 2;
+  min-height: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookieCard {
+  width: 320px;
+  height: 280px;
+  background: linear-gradient(137deg, rgb(255, 0, 179) 0%, rgba(0, 212, 255, 1) 100%);
+  transition: 0.3s ease;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Agrega sombra */
+  border-radius: 10px;
+}
+
+.cookieCard:hover {
+  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.6); /* Efecto de brillo */
+  background: linear-gradient(137deg, rgba(255, 0, 179, 1) 0%, rgba(0, 212, 255, 1) 50%, rgba(255, 255, 0, 1) 100%);
+  background-size: 300%; /* Hace que el gradiente pueda animarse */
+  background-position: right center; /* Mueve la posición del gradiente */
+  z-index: 0;
+}
+
+.cookieCard::after {
+  content: '';
+  background-color: #181818;
+  position: absolute;
+  z-index: 1;
+  transition: 0.3s ease;
+  height: 98%;
+  width: 98%;
+  top: 1%;
+  left: 1%;
+  border-radius: 28px;
+}
+
+
+
+.cookieHeading {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgb(241, 241, 241);
+  z-index: 2;
+  margin: 0;
+}
+
+.cookieDescription {
+  font-size: 0.9em;
+  color: rgb(241, 241, 241);
+  margin: 0px;
+  list-style: none;
+  padding: 10px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 250px;
+  overflow: auto;
+  z-index: 2;
+   /* Elimina el padding a la derecha */
+  max-height: 200px; /* O ajusta este valor según tus necesidades */
+  overflow-y: auto;
+  /* Personalización del scrollbar */
+  scrollbar-width: thin; /* Firefox: ancho del scrollbar */
+  scrollbar-color: rgb(255, 95, 95) rgba(0, 0, 0, 0.5); /* Firefox: colores */
+}
+
+/* Personalización para Chrome, Edge, y navegadores basados en Webkit */
+.cookieDescription::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+.cookieDescription::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 95, 95); /* Color del "thumb" */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.cookieDescription::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(255, 0, 0); /* Color del "thumb" al pasar el cursor */
+}
+
+.cookieDescription::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo de la barra */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.bin-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  background-color: rgb(255, 95, 95);
+  cursor: pointer;
+  border: 3px solid rgb(255, 201, 201);
+  transition-duration: 0.3s;
+  z-index: 3;
+}
+
+.bin-bottom {
+  width: 15px;
+}
+
+.bin-top {
+  width: 17px;
+  transform-origin: right;
+  transition-duration: 0.3s;
+}
+
+.bin-button:hover .bin-top {
+  transform: rotate(45deg);
+}
+
+.bin-button:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.bin-button:active {
+  transform: scale(0.9);
+}
+
+li {
+  list-style: none;
+  color: rgb(241, 241, 241);
+}

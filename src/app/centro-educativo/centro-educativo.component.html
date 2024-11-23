@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATOS IES PLAYAMAR</title>
+  </head>
+  <body>
+    <div class="grid-contenido">
+      <div class="item1">
+        <h1>{{title}}</h1>
+      </div>
+      <div class="item2">
+        <p>Localidad: {{centroActual.localidad}}</p>
+        <p>Familia Profesional:<br>{{centroActual.familiaProfesional}}</p>
+        <p>Centro: {{centroActual.centro}}</p>
+        <p>Logo:</p>
+        <img class="logo" src="{{centroActual.logo}}" alt="logo" />
+        <br>
+      <button class="btn" (click)="cambiarCentro(centroActual)">Cambiar!</button>
+      </div>
+      <br><br><br>
+      </div>
+
+  </body>
+</html>
+
