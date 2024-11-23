@@ -4,27 +4,93 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>T 4.3 Listado de centros</title>
+    <title>{{ title }}</title>
   </head>
-
   <body>
     <h1>{{ title }}</h1>
     <div class="contenedor">
       <div class="cuadro-sombra">
         <h2>Listado de centros:</h2>
+
+        <div class="centro-actual">
+          <h3>{{ obtenerCentroActual().centro }}</h3>
+          <p>
+            <strong>Localidad:</strong> {{ obtenerCentroActual().localidad }}
+          </p>
+          <p>
+            <strong>Familias Profesionales:</strong>
+            {{ obtenerCentroActual().familiaProfesional.join(", ") }}
+          </p>
+          <img
+            [src]="obtenerCentroActual().logo"
+            alt="Logo del centro"
+            width="100"
+            height="100"
+          />
+        </div>
+
         <ul class="lista-centros">
-          <li *ngFor="let centro of listadoCentro; else: noCentros">
-            {{ centro }}
+          <li *ngFor="let centro of centros; let i = index">
+            {{ centro.centro }} - {{ centro.localidad }}
           </li>
         </ul>
-        <ng-template #noCentros>
-          <p>No hay centros educativos</p>
-        </ng-template>
+
+        <div class="pila">
+          <h4>Centros eliminados:</h4>
+          <ul>
+            <li *ngFor="let centro of pila">{{ centro.centro }}</li>
+          </ul>
+        </div>
+
         <div class="acciones">
-          <button class="btn-class-name" (click)="eliminarCentro()">
-            <span class="back"></span>
-            <span class="front"></span>
-          </button>
+          <div class="button-container">
+            <button
+              class="button-3d"
+              (click)="insertarCentro()"
+              [disabled]="pila.length === 0"
+            >
+              <div class="button-top">
+                <span class="material-icons">añadir</span>
+              </div>
+              <div class="button-bottom"></div>
+              <div class="button-base"></div>
+            </button>
+            <button
+              class="button-3d"
+              (click)="eliminarCentro()"
+              [disabled]="centros.length === 0"
+            >
+              <div class="button-top">
+                <span class="material-icons">eliminar</span>
+              </div>
+              <div class="button-bottom"></div>
+              <div class="button-base"></div>
+            </button>
+
+            <button
+              class="button-3d"
+              (click)="anteriorCentro()"
+              [disabled]="posicionActual === 0"
+            >
+              <div class="button-top">
+                <span class="material-icons">❮</span>
+              </div>
+              <div class="button-bottom"></div>
+              <div class="button-base"></div>
+            </button>
+
+            <button
+              class="button-3d"
+              (click)="siguienteCentro()"
+              [disabled]="posicionActual === centros.length - 1"
+            >
+              <div class="button-top">
+                <span class="material-icons">❯</span>
+              </div>
+              <div class="button-bottom"></div>
+              <div class="button-base"></div>
+            </button>
+          </div>
         </div>
       </div>
     </div>
