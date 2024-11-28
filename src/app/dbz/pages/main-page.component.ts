@@ -12,7 +12,7 @@ export class MainPageComponent {
   public personajes: Personaje[] = [
     {
       nombre: 'Krilin',
-      fuerza: 1000
+      fuerza: 500
     },
     {
       nombre: 'Goku',
@@ -20,11 +20,15 @@ export class MainPageComponent {
     },
     {
       nombre: 'Vegeta',
-      fuerza: 1000
+      fuerza: 10000
     }
 
 
   ];
 
+  public oneNewPersonaje(personaje: Personaje): void {
+    console.log('MainPage');
+    console.log(personaje);
+  }
 }
 
