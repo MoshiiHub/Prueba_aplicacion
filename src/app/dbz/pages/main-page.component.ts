@@ -1,14 +1,30 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Personaje } from '../interfaces/personaje.interface';
 
 @Component({
   selector: 'app-dbz-main-page',
-  standalone:false,
   templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.css']
+  standalone:false
 
 })
 
 export class MainPageComponent {
+  public personajes: Personaje[] = [
+    {
+      nombre: 'Krilin',
+      fuerza: 1000
+    },
+    {
+      nombre: 'Goku',
+      fuerza: 10000
+    },
+    {
+      nombre: 'Vegeta',
+      fuerza: 1000
+    }
+
+
+  ];
 
 }
 

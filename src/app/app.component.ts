@@ -4,7 +4,6 @@ import { ContadorComponent } from './contador/contador.component';
 import { CentroEducativoComponent } from './centro-educativo/centro-educativo.component';
 import { ListadoCentrosComponent } from './listado-centros/listado-centros.component';
 import { HeroesModule } from './heroes/heroes.module';
-import { MainPageComponent } from "./dbz/pages/main-page.component";
 import { DbzModule } from './dbz/services/dbz.module';
 
 
