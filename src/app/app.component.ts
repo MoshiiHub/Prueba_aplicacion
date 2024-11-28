@@ -14,7 +14,7 @@ import { DbzModule } from './dbz/services/dbz.module';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, ContadorComponent, CentroEducativoComponent, ListadoCentrosComponent,
-    HeroesModule, MainPageComponent, DbzModule],
+    HeroesModule, DbzModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
