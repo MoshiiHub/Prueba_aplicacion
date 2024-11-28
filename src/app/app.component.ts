@@ -7,6 +7,7 @@ import { HeroesModule } from './heroes/heroes.module';
 
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

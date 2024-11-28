@@ -12,7 +12,14 @@
   background-color: bisque;
   padding: 20px;
 }
+@font-face {
+  font-family: 'myFont';
+  src: url('/assets/fonts/NightSnowDemoRegular.ttf') format('truetype');
+}
 
+h1 {
+  font-family: 'myFont', sans-serif;
+}
 
 button {
   margin-top: 10px;
@@ -21,7 +28,4 @@ button {
 body{
   height: 300px;
 }
-h1{
-  text-align: center;
-  font-family: fantasy;
-}
+
