@@ -56,4 +56,13 @@ h1{
   text-align: center;
 }
 
+.card__avatar img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card__avatar img {
+  border-radius: 50%;
+  object-fit: cover;
+}
 

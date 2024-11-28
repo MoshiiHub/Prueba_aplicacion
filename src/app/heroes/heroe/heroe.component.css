@@ -1,16 +1,6 @@
-.grid-contenido {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(252, 255, 188);
-
-}
-
-.item1 {
-  text-align: center;
-  align-items: center;
-  background-color: bisque;
-  padding: 20px;
+body{
+  background-color: #EaCEC3;
+  height: 500px;
 }
 @font-face {
   font-family: 'myFont';
@@ -28,4 +18,97 @@ button {
 body{
   height: 300px;
 }
+<<<<<<< HEAD
 
+||||||| cc96908
+h1{
+  text-align: center;
+  font-family: fantasy;
+}
+=======
+h1{
+  text-align: center;
+  font-family: fantasy;
+}
+.card {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card__img {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+.card__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.card__avatar {
+  margin-top: -50px; /* Adjust positioning to overlap avatar */
+  z-index: 1;
+  text-align: center;
+}
+
+.avatar__image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+}
+
+.card__title, .card__subtitle {
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.card__wrapper {
+  margin-top: auto;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card__btn {
+  background-color: #fc726e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.card__btn:hover {
+  background-color: #ff8475;
+}
+
+.card__btn-solid {
+  background-color: #4bc190;
+}
+
+.card__btn-solid:hover {
+  background-color: #399a73;
+}
+>>>>>>> 801181d5ec91d30fb0c958611bfa34efc46c85ba

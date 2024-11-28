@@ -4,6 +4,8 @@ import { ContadorComponent } from './contador/contador.component';
 import { CentroEducativoComponent } from './centro-educativo/centro-educativo.component';
 import { ListadoCentrosComponent } from './listado-centros/listado-centros.component';
 import { HeroesModule } from './heroes/heroes.module';
+import { MainPageComponent } from "./dbz/pages/main-page.component";
+import { DbzModule } from './dbz/services/dbz.module';
 
 
 
@@ -11,8 +13,8 @@ import { HeroesModule } from './heroes/heroes.module';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ContadorComponent, CentroEducativoComponent, ListadoCentrosComponent,
-  HeroesModule],
+  imports: [RouterOutlet, ContadorComponent, CentroEducativoComponent, ListadoCentrosComponent,
+    HeroesModule, MainPageComponent, DbzModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
