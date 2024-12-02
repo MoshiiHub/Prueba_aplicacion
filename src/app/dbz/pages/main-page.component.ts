@@ -27,8 +27,7 @@ export class MainPageComponent {
   ];
 
   public oneNewPersonaje(personaje: Personaje): void {
-    console.log('MainPage');
-    console.log(personaje);
+   this.personajes.push(personaje);
   }
 }
 
