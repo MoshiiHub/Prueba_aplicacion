@@ -18,20 +18,16 @@ export class AddPersonajeComponent {
     fuerza: 0
   };
   public addPersonaje(): void {
+    if (this.personaje.nombre.trim().length === 0) return;
 
-
-
-    console.log(this.personaje);
-    if (this.personaje.nombre.length === 0) return;
-
+    console.log('Agregando personaje:', this.personaje);
     this.oneNewPersonaje.emit(this.personaje);
 
+    // Resetea el formulario
     this.personaje = {
       nombre: '',
-      fuerza: 0
-    }
-    //this.personaje.nombre = '';
-    //this.personaje.fuerza = 0;
+      fuerza: 0,
+    };
   }
 
 }

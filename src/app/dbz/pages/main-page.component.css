@@ -1,7 +1,10 @@
-body{
+body,html{
 margin-left: 40px;
 
 }
 h1{
   text-align: center;
+  color: #39a2db;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }

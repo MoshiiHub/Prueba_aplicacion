@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-<body>
-  <h1>DBZ Personajes</h1>
-  <hr>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>DBZ Personajes</h1>
+    <hr />
 
-<div class="row">
-  <div class="col">
-    <dbz-lista [Milista]="personajes"></dbz-lista>
-  </div>
+    <div class="row">
+      <div class="col">
+        <dbz-lista
+          [Milista]="personajes"
+          (personajeEliminado)="manejarEliminacion($event)"
+        ></dbz-lista>
+      </div>
 
-  <div class="col">
-    <dbz-add-personaje (oneNewPersonaje)="oneNewPersonaje($event)"></dbz-add-personaje>
-  </div>
-</div>
-</body>
+      <div class="col">
+        <dbz-add-personaje
+          (oneNewPersonaje)="oneNewPersonaje($event)"
+        ></dbz-add-personaje>
+      </div>
+    </div>
+  </body>
 </html>

@@ -28,6 +28,12 @@ export class MainPageComponent {
 
   public oneNewPersonaje(personaje: Personaje): void {
    this.personajes.push(personaje);
+
+  }
+
+  public manejarEliminacion(personaje: Personaje): void {
+    console.log('Eliminado en MainPageComponent:', personaje);
+
   }
 }
 
