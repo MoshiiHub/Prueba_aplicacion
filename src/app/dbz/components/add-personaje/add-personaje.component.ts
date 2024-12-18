@@ -14,9 +14,11 @@ export class AddPersonajeComponent {
   public oneNewPersonaje: EventEmitter<Personaje> = new EventEmitter();
 
   public personaje: Personaje = {
+    id: '',
     nombre: '',
     fuerza: 0
   };
+
   public addPersonaje(): void {
     if (this.personaje.nombre.trim().length === 0) return;
 
@@ -25,6 +27,7 @@ export class AddPersonajeComponent {
 
     // Resetea el formulario
     this.personaje = {
+      id: '',
       nombre: '',
       fuerza: 0,
     };

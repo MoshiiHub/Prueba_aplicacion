@@ -1,39 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { Personaje } from '../interfaces/personaje.interface';
+import { Component } from '@angular/core';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-dbz-main-page',
   templateUrl: './main-page.component.html',
-  standalone:false
-
+  standalone: false,
 })
-
 export class MainPageComponent {
-  public personajes: Personaje[] = [
-    {
-      nombre: 'Krilin',
-      fuerza: 500
-    },
-    {
-      nombre: 'Goku',
-      fuerza: 10000
-    },
-    {
-      nombre: 'Vegeta',
-      fuerza: 10000
-    }
+  constructor(public DbzService: DbzService) {}
 
-
-  ];
-
-  public oneNewPersonaje(personaje: Personaje): void {
-   this.personajes.push(personaje);
-
+  get personajes() {
+    return this.DbzService.personajes;
   }
 
-  public manejarEliminacion(personaje: Personaje): void {
-    console.log('Eliminado en MainPageComponent:', personaje);
+  eliminarPorId(id: string): void {
+    this.DbzService.deletePersonajeById(id);
+  }
 
+  agregarPersonaje(nuevoPersonaje: { nombre: string; fuerza: number }) {
+    this.DbzService.onNewPersonaje(nuevoPersonaje);
   }
 }
+
 

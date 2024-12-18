@@ -13,19 +13,19 @@
     <ul class="list-group">
       <li
         *ngFor="let personaje of listaPersonajes; let i = index; let esPar = even; let esUltimo = last; let esPrimero = first"
-        class="list-group-item d-flex justify-content-between aling-items-center" [ngClass]="{
-          'list-group-item-primary': esPrimero,
-          'list-group-item-secondary': esPar,
-          'list-group-item-danger': esUltimo
-        }">
+        class="list-group-item d-flex justify-content-between align-items-center" [ngClass]="{
+    'list-group-item-primary': esPrimero,
+    'list-group-item-secondary': esPar,
+    'list-group-item-danger': esUltimo
+  }">
         <div>
-          <span class="text-primary">{{ i + 1 }}</span>
-          <span>{{ personaje.nombre }} -</span>
+          <span class="text-primary">{{ i + 1 }} </span>
+          <span>Nombre: {{ personaje.nombre }} -</span>
           <strong>Fuerza: </strong>
           <strong>{{ personaje.fuerza }}</strong>
         </div>
 
-        <button class="btn btn-danger" (click)="borrarPersonaje(i)">X</button>
+        <button class="btn btn-danger" (click)="onDeletePersonaje(personaje.id)">X</button>
       </li>
     </ul>
   </div>

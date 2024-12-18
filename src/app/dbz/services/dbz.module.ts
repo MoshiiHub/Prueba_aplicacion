@@ -6,8 +6,9 @@ import { AddPersonajeComponent } from "../components/add-personaje/add-personaje
 import { FormsModule } from "@angular/forms";
 
 
+
 @NgModule({
-  declarations: [MainPageComponent,ListaComponent,AddPersonajeComponent,],
+  declarations: [MainPageComponent,ListaComponent,AddPersonajeComponent],
   imports: [CommonModule,FormsModule],
   exports: [MainPageComponent]
 
