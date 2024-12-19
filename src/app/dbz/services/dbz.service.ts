@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 
 @Injectable({ providedIn: 'root' })
 export class DbzService {
-  constructor() {}
+  constructor() { }
 
   public personajes: Personaje[] = [
     {
@@ -24,15 +24,22 @@ export class DbzService {
     },
   ];
 
-
-
   public onNewPersonaje(personaje: Omit<Personaje, 'id'>): void {
-    const newPersonaje = {id: uuid(), ...personaje};
+    const newPersonaje = { id: uuid(), ...personaje };
     this.personajes.push(newPersonaje);
   }
-
 
   public deletePersonajeById(id: string): void {
     this.personajes = this.personajes.filter((personaje) => personaje.id !== id);
   }
+
+  public addPersonaje(personaje: Personaje): void {
+    const newPersonaje: Personaje = {
+      id: uuid(),
+      nombre: personaje.nombre,
+      fuerza: personaje.fuerza
+    }
+    this.personajes.push(newPersonaje);
+  }
+
 }

@@ -12,14 +12,14 @@
     <div class="row">
       <div class="col">
         <dbz-lista
-        [Milista]="personajes"
-        (personajeEliminado)="eliminarPorId($event)"
+        [listaPersonajes]="personajes"
+        (onPersonajeEliminado)="eliminarPorId($event)"
       ></dbz-lista>
       </div>
 
       <div class="col">
         <dbz-add-personaje
-          (oneNewPersonaje)="DbzService.onNewPersonaje($event)"
+          (oneNewPersonaje)="onNewPersonaje($event)"
         ></dbz-add-personaje>
       </div>
     </div>

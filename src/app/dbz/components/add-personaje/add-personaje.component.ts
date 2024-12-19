@@ -20,6 +20,7 @@ export class AddPersonajeComponent {
   };
 
   public addPersonaje(): void {
+
     if (this.personaje.nombre.trim().length === 0) return;
 
     console.log('Agregando personaje:', this.personaje);

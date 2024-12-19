@@ -9,19 +9,20 @@ import { Personaje } from '../../interfaces/personaje.interface';
   standalone: false
 })
 export class ListaComponent {
-  @Input('Milista')
+  @Input()
   public listaPersonajes: Personaje[] = [];
 
   @Output()
-  public personajeEliminado: EventEmitter<string> = new EventEmitter();
+  public onPersonajeEliminado: EventEmitter<string>= new EventEmitter;
 
-  public onDeletePersonaje(id: string): void {
-    const eliminado = this.listaPersonajes.find(personaje => personaje.id === id);
-    if (eliminado) {
-      console.log('Personaje eliminado:', eliminado.nombre);
-      this.personajeEliminado.emit(id);
-    } else {
-      console.log('No se encontró un personaje con el ID:', id);
-    }
+  public deletePersonaje(id: string): void {
+    // const eliminado = this.listaPersonajes.find(personaje => personaje.id === id);
+    // if (eliminado) {
+    //   console.log('Personaje eliminado: ', eliminado.nombre);
+    //   this.personajeEliminado.emit(id);
+    // } else {
+    //   console.log('No se encontró un personaje con el ID: ', id);
+    // }
+    this.onPersonajeEliminado.emit(id);
   }
 }
