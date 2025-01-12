@@ -8,7 +8,7 @@
     "build:github":"npm run delete:docs && npm run build:href && npm run copy:dist",
     "build:href": "ng build --base-href ./",
     "delete:docs": "del docs",
-    "copy:dist": "copyfiles -f dist/base-02/* docs",
+    "copy:dist": "copyfiles dist/base-02/browser/** docs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
